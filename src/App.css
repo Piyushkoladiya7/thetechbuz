@@ -1,38 +1,526 @@
-.App {
+
+.technicalbuz_nav{
+  margin:0 12px;
+  padding: 0px !important;
+}
+
+.sticky-nav{
+  position: sticky;
+  top: 0;
+}
+
+.technicalbuz_nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.technicalbuz_nav a:hover{
+  color: #ffffff;
+  background-color: #22f8d469 !important;
+}
+
+.technicalbuz_nav .active{
+  background-color: #02cdab !important;
+}
+
+.technicalbuz_nav .navbar{
+  padding: 0px !important;
+}
+
+.technicalbuz_nav .navbar-dark .navbar-nav .a .active{
+  background-color: #02cdab !important;
+}
+
+.technicalbuz_nav .navbar-dark .navbar-nav .a{
+  padding: 20px !important;
+}
+
+.grid-Tech{
+  background-image: url(./assets/image/grid_img_1.jfif);
+  height: 400px;
+  background-size: cover;
+  padding: 10px;
+  position: relative;
+}
+
+.grid-Tech .text-component h4{
+  font-size: 20px;
+  color: #fff;
+  /* position: absolute; */
+  z-index: 1;
+  /* bottom: 10px; */
+}
+
+.text-component{
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+}
+
+.grid-Tech::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0.4) 100%);
+  bottom: 0;
+  top: auto;
+}
+
+.grid-Science{
+  background-image: url(./assets/image/grid_img_2.jfif);
+  height: 193px;
+  background-size: cover;
+  padding: 10px;
+  position: relative;
+  background-position: center;
+}
+
+.grid-mobility{
+  background-image: url(./assets/image/grid_img_3.jfif);
+  height: 193px;
+  background-size: cover;
+  padding: 10px;
+  position: relative;
+  background-position: center;
+}
+
+.grid-wealth{
+  background-image: url(./assets/image/grid_img_4.jfif);
+  height: 193px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+  position: relative;
+}
+
+.tech-btn{
+  z-index: 1;
+  border: none;
+  background: #b57619;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.science-btn{
+  z-index: 1;
+  border: none;
+  background: #4d73e2;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.mobility-btn{
+  z-index: 1;
+  border: none;
+  background: #e52600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.wealth-btn{
+  z-index: 1;
+  border: none;
+  background: #7e00d8;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* .mobility_popular{
+  margin-top: 50px;
+} */
+
+.tab_mobility{
+  border-top: 1px solid #289dcc;
+  padding-top: 30px;
+}
+.popular-posts{
+  border-top: 1px solid #02cdab;
+  padding-top: 30px;
+}
+
+.mobility_tab_lable{
+background-color: #289dcc;
+  color: #ffffff;
   text-align: center;
+  padding: 3px 7px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.technology_tab_lable{
+background-color: #bf3bb4;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tab_technology{
+  border-top: 1px solid #bf3bb4;
+  padding-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.money_tab_lable{
+background-color: #ffbc67;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 7px;
+}
+
+.tab_money{
+  border-top: 1px solid #ffbc67;
+  padding-top: 30px;
+}
+
+.popular-posts_tab_lable{
+background-color: #02cdab;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 7px;
+}
+
+.mobility-title{
+  font-size: 22px;
+}
+
+.date_althaf p{
+  color: #969696;
+  font-size: 14px;
+}
+
+.date_althaf p span{
+  color: #333;
+}
+
+.mobility-content{
+  font-size: 14px;
+  color: #777777;
+}
+
+.side-menu{
+  /* height: 73px; */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+}
+
+.side-menu-text h3{
+  font-size: 16px;
+  color: #232323;
+}
+
+
+.Wealth-component .grid-wealth{
+  background-image: url(./assets/image/grid_img_4.jfif);
+  height: 437px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+  position: relative;
+}
+
+.Wealth-component .grid-wealth_2{
+  background-image: url(./assets/image/wealth_2.jfif);
+  height: 437px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+  position: relative;
+}
+.Wealth-component .grid-wealth_3{
+  background-image: url(./assets/image/wealth_3.jfif);
+  height: 437px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+  position: relative;
+}
+.Wealth-component .grid-wealth_4{
+  background-image: url(./assets/image/wealth_4.jfif);
+  height: 437px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+  position: relative;
+}
+
+.grid-Tech .text-component h6{
+  font-size: 12px;
+  color: #fff;
+  z-index: 1;
+  font-weight: normal;
+}
+
+.money-text-component h3{
+  font-size: 21px;
+  color: #232323;
+}
+
+.money-text-component h6{
+  font-size: 14px;
+  color: #777777;
+  font-weight: normal;
+}
+
+
+/* =================================>Footer<============================= */
+
+.img-content p {
+  color: #ffffffc7;
+  font-weight: 400;
+  margin-bottom: 12px;
+  font-size: 17px;
+  transition: all linear 0.1s;
+  width: fit-content;
+  position: relative;
+}
+.footer_links.img-content p:hover{
+  color: #02cdab;
+}
+.img-content p::after {
+  position: absolute;
+  content: '';
+  width: 250px;
+  bottom: -5px;
+  left: 0;
+  border: 1px solid #5b5b5b;
+}
+
+.img-content h3 {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+.img-content h3::after{
+position: absolute;
+content: '';
+border-bottom:2px solid #02cdab;
+left: 0;
+bottom: -8px;
+width: 15%;
+}
+
+.footer-section {
+  background-color: #303440;
+  padding: 25px 0;
+}
+.footerbottom{
+  background-color: #252730;
+  padding: 20px 0px 25px;
+}
+.footerbottom p{
+  font-size: 16px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+.footerbottom p span{
+  font-size: 16px;
+  font-weight: 400;
+  color: #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aaaaaa;
+  margin-bottom: 12px;
+}
+
+.link-contant {
+  color: whitesmoke;
+  text-decoration: none !important;
+}
+
+/* ==============================>Detail<============================== */
+
+.detail-content{
+  border-top: 0px;
+  padding: 10px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.detail-header{
+  font-size: 31px;
+  color: #333333;
+}
+
+.detail-body p{
+  font-size: 16px;
+  color: #444444;
+  font-weight: 400;
+}
+
+.search-input{
+  display: flex;
+}
+
+.search-input input{
+  width: 85%;
+  padding: 4px 54px 4px 10px;
+  height: 46px;
+  color: #777777;
+  background-color: #ffffff;
+  margin: 0;
+  border: 1px solid #eaeaea;
+}
+
+.search-input button{
+  width: 15%;
+  border: none;
+  background-color: #02cdab;
+}
+
+/* / replay-form========================= / */
+
+.replay-form h3 {
+  padding-bottom: 18px;
+  color: #333333;
+  line-height: 28px;
+  font-size: 25px;
+  font-weight: 400;
+}
+.replay-form form label span{
+  color: #ff0000;
+}
+/* .replay-form form input{
+  padding: 1%;
+    border: 1px solid #eaeaea;
+    line-height: 20px;
+    width: 65%;
+    margin: 0 0 40px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+} */
+/* .replay-form form textarea{
+  padding: 1%;
+    border: 1px solid #eaeaea;
+    line-height: 20px;
+    width: 65%;
+    margin: 0 0 40px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+} */
+.checkbox{
+  width: fit-content !important;
+  margin-right: 10px !important;
+}
+.replay-form p {
+  color: #444444;
+}
+.replay-form button {
+  background-color: #02cdab;
   color: white;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  
+  transition: all linear 0.3s;
+}
+.replay-form button:hover{
+  background-color: #444444;
 }
 
-.App-link {
-  color: #61dafb;
+.recent_posts_tab_lable{
+  background-color: #02cdab;
+    color: #ffffff;
+    text-align: center;
+    padding: 3px 7px;
+  }
+  
+  .tab_recent_posts{
+    border-top: 1.5px solid #02cdab;
+    padding-top: 30px;
+  }
+
+  .tab_recent_posts p{
+    font-size: 14px;
+    color: #02cdab;
+  }
+
+  /* ====================================================================================>top buttoun in footer by mitesh<========================================================================================== */
+.return-to-top {
+  border: none !important;
+    position: fixed;
+    bottom: 10px;
+    right: 35px;
+    background-color: #02cdab;
+    display: none;
+    height: 35px;
+    width: 35px;
+    line-height: 10px;
+    border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.return-to-top img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ====================================================>Contact<==================================================== */
+
+
+.Contact-form h1 {
+  padding-bottom: 18px;
+  color: #333333;
+  line-height: 28px;
+  font-weight: 400;
+}
+.Contact-form form label {
+  margin-bottom: 10px;
+  color: #494d50;
+  font-weight: 500;
+  font-size: 16px;
+}
+.Contact-form form label span{
+  color: #ff0000;
+}
+.Contact-form form input{
+  padding: 1%;
+    border: 1px solid #eaeaea;
+    line-height: 20px;
+    width: 100%;
+    margin: 0 0 40px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+.Contact-form form textarea{
+  padding: 1%;
+    border: 1px solid #eaeaea;
+    line-height: 20px;
+    width: 100%;
+    margin: 0 0 40px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+.checkbox{
+  width: fit-content !important;
+  margin-right: 10px !important;
+}
+.Contact-form p {
+  color: #444444;
+}
+.Contact-form button {
+  background-color: #02cdab;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  
+  transition: all linear 0.3s;
+}
+.Contact-form button:hover{
+  background-color: #444444;
+}
+
+.navbar-dark .navbar-toggler{
+  border: none !important;
+  box-shadow: none !important;
 }
