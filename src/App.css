@@ -4,6 +4,10 @@
   padding: 0px !important;
 }
 
+.header-search{
+  float: right;
+}
+
 .sticky-nav{
   position: sticky;
   top: 0;

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import React from 'react'
+import { Nav, Navbar } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
@@ -17,6 +17,7 @@ const Header = () => {
                                 <Link to="/" className={location.pathname === "/" ? "active" : ""}>Home</Link>
                                 <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</Link>
                             </Nav>
+                                {/* <img src="./assets/image/search.png" alt="" height="100%" className='header-search'/> */}
                         </Navbar.Collapse>
                     </Navbar>
                 {/* </div> */}

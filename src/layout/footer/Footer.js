@@ -18,13 +18,13 @@ const Footer = () => {
                         </Col>
                         <Col lg={3} md={6} sm={6} className="img-content footer_links usefull-link">
                             <h3>Categories</h3>
-                            <Link to="/" className="link-contant">
+                            <Link to="/mobility" className="link-contant">
                                 <p>Mobility</p>
                             </Link>
-                            <Link to="/service" className="link-contant">
+                            <Link to="/science" className="link-contant">
                                 <p>Science</p>
                             </Link>
-                            <Link to="/about" className="link-contant">
+                            <Link to="/tech" className="link-contant">
                                 <p>Tech</p>
                             </Link>
                             <Link to="/contact" className="link-contant">
