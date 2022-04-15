@@ -642,11 +642,11 @@
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
 .lable-container:hover input~.checkmark {
   background-color: #ccc;
-  border: 2px solid #ccc;
 }
 
 .lable-container input:checked~.checkmark {
@@ -681,4 +681,10 @@
 .result-count {
   position: absolute;
   right: 5px;
+ 	top: 7px;
+	left: 7px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
