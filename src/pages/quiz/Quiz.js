@@ -124,12 +124,13 @@ const Quiz = () => {
                         seeResult &&
                         <>
                             <div className='mb-3'>
-                                <p className='mb-0'>Your score is 0%</p>
+                                <p className='mb-0'>Your score is {(questions.filter(item => item.isUserAnsTrue).length/questions.length)*100}%</p>
                                 <p>The average score is 71%</p>
                             </div>
-                            <ProgressBar now={60} />
+                            <ProgressBar now={(questions.filter(item => item.isUserAnsTrue).length/questions.length)*100} />
+                            {console.log('questions.filter(item => item.isUserAnsTrue).length/questions.length', (questions.filter(item => item.isUserAnsTrue).length/questions.length)*100)}
                             <div className='mt-3'>
-                                <button className='set-quiz-start-btn'>Restart quiz</button>
+                                <button className='set-quiz-start-btn' onClick={() => window.location.reload()}>Restart quiz</button>
                             </div>
                             {questions?.length ? questions.map((item, i) =>
                                 <>

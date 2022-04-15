@@ -704,3 +704,7 @@
   padding: 0px 10px;
   border-right: 0px;
 }
+
+.progress-bar{
+  background-color: #ff6600 !important;
+}
