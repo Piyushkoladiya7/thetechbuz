@@ -603,11 +603,11 @@ width: 15%;
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
 .lable-container:hover input ~ .checkmark {
   background-color: #ccc;
-  border: 2px solid #ccc;
 }
 
 .lable-container input:checked ~ .checkmark {
@@ -626,8 +626,8 @@ width: 15%;
 } */
 
 .lable-container .checkmark:after {
- 	top: 9px;
-	left: 9px;
+ 	top: 7px;
+	left: 7px;
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
