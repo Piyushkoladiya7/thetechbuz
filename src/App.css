@@ -593,10 +593,10 @@
   background-color: #ff6600;
   color: #fff;
 }
-.radio-bg-green {
+/* .radio-bg-green {
   background-color: #ff6600;
   color: #fff;
-}
+} */
 .radio-bg-red {
   border-color: red !important;
   opacity: 1 !important;
@@ -665,8 +665,8 @@
 } */
 
 .lable-container .checkmark:after {
-  top: 9px;
-  left: 9px;
+  top: 7px;
+  left: 7px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -678,13 +678,29 @@
   top: 5px;
   right: 5px;
 }
+
 .result-count {
   position: absolute;
   right: 5px;
- 	top: 7px;
-	left: 7px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+}
+
+.result-car{
+  border: 1px solid #facfcd;
+  margin-top: 50px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.error-text{
+  color: #facfcd;
+  position: absolute;
+  top: -14px;
+  background-color: #fff;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid #facfcd;
+  border-left: 0px;
+  padding: 0px 10px;
+  border-right: 0px;
 }

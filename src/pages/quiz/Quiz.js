@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { ProgressBar } from 'react-bootstrap'
 
 const Quiz = () => {
 
@@ -109,9 +110,11 @@ const Quiz = () => {
                                             }) : <></>
                                         }
                                     </div>
-                                    {current !== 0 && <button className='set-quiz-start-btn' onClick={() => setCurrent(i - 1)}>prev</button>}
-                                    {current !== Questions.length - 1 ? <button className='set-quiz-start-btn' onClick={() => setCurrent(i + 1)}>Next</button> :
-                                        <button className='set-quiz-start-btn' onClick={() => setSeeResult(true)}>See Result</button>}
+                                    <div className='d-flex justify-content-center gap-2'>
+                                        {current !== 0 && <button className='set-quiz-start-btn' onClick={() => setCurrent(i - 1)}>prev</button>}
+                                        {current !== Questions.length - 1 ? <button className='set-quiz-start-btn' onClick={() => setCurrent(i + 1)}>Next</button> :
+                                            <button className='set-quiz-start-btn' onClick={() => setSeeResult(true)}>See Result</button>}
+                                    </div>
                                 </>}
                             </>
                         ) : <></>
@@ -119,27 +122,42 @@ const Quiz = () => {
 
                     </> :
                         seeResult &&
-                            questions?.length ? questions.map((item, i) =>
+                        <>
+                            <div className='mb-3'>
+                                <p className='mb-0'>Your score is 0%</p>
+                                <p>The average score is 71%</p>
+                            </div>
+                            <ProgressBar now={60} />
+                            <div className='mt-3'>
+                                <button className='set-quiz-start-btn'>Restart quiz</button>
+                            </div>
+                            {questions?.length ? questions.map((item, i) =>
                                 <>
-                                    <div className='result-count'>{i + 1} / {questions.length}</div>
-                                    <p>{item.question}</p>
-                                    <div className='d-flex flex-column'>
-                                        {
-                                            item.options?.length ? item.options.map((optItem) => {
-                                                { console.log("item.userAns === optItem", item.userAns, optItem, item.userAns === optItem) }
-                                                return <>
-                                                    <div className={`radio-btn ${item.userAns === optItem && 'radio-bg'} ${item.ans === optItem && "radio-bg-green"} ${item.userAns === optItem && 'radio-bg-red'}`}>
-                                                        <label className="lable-container">{optItem}
-                                                            <input disabled = {true} type="radio" name="radio" onChange={() => selectAns(i, optItem)} />
-                                                            <span className="checkmark"></span>
-                                                        </label>
-                                                    </div>
-                                                </>
-                                            }) : <></>
-                                        }
+                                        <div className='result-count mt-3'>{i + 1} / {questions.length}</div>
+                                    <div className='c_result'>
+                                        <div className='result-car'>
+                                            {!item.userAns && <p className='error-text'>You have not answered this question</p>}
+                                            <p>{item.question}</p>
+                                            <div className='d-flex flex-column'>
+                                                {
+                                                    item.options?.length ? item.options.map((optItem) => {
+                                                        { console.log("item.userAns === optItem", item.userAns, optItem, item.userAns === optItem) }
+                                                        return <>
+                                                            <div className={` ${item.userAns === optItem && 'radio-bg'} ${item.ans === optItem && "radio-bg-green"} ${item.ans !== optItem && item.userAns === optItem && 'radio-bg-red'}`}>
+                                                                <label className="lable-container">{optItem}
+                                                                    <input disabled={true} type="radio" name="radio" onChange={() => selectAns(i, optItem)} />
+                                                                    <span className="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </>
+                                                    }) : <></>
+                                                }
+                                            </div>
+                                        </div>
                                     </div>
                                 </>
-                            ) : <></>
+                            ) : <></>}
+                        </>
                 }
             </div>
         </>
