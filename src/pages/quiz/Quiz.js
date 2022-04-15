@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Quiz = () => {
-    const [isStarted, setIsStarted] = useState(false)
-    const [isSelected, setIsSelected] = useState('')
 
     const Questions = [
         {
@@ -11,77 +9,138 @@ const Quiz = () => {
             // ans:{a:'TRUE'},
             options: [
                 'TRUE',
-                'FALSE' ,
-            ]
+                'FALSE',
+            ],
+            userAns: '',
+            isUserAnsTrue: false
         },
         {
             question: 'Cryptocurrencies and blockchain are the same thing?',
             ans: 'NO',
             // ans:{b:'NO'},
-            option: [
-                'YES' ,
-                'NO' ,
-            ]
+            options: [
+                'YES',
+                'NO',
+            ],
+            userAns: '',
+            isUserAnsTrue: false
         },
         {
             question: 'On which Asset, Investors can trade 24 hours?',
             ans: 'Crypto Currencies',
-            option: [
-                'Stocks' ,
-                'Crypto Currencies' ,
-                'None of Above' 
-            ]
+            options: [
+                'Stocks',
+                'Crypto Currencies',
+                'None of Above'
+            ],
+            userAns: '',
+            isUserAnsTrue: false
         },
         {
             question: 'Which one is Fiat currency?',
             ans: 'USD',
-            option: [
+            options: [
                 'USD',
                 'USDT',
-                'BUSD' 
-            ]
+                'BUSD'
+            ],
+            userAns: '',
+            isUserAnsTrue: false
         }
     ]
 
+    const [isStarted, setIsStarted] = useState(false)
+    const [seeResult, setSeeResult] = useState(false)
+    const [current, setCurrent] = useState(0)
+    const [questions, setQuestions] = useState(Questions)
+
+    const selectAns = (questionI, answer) => {
+        console.log("questionI, answer", questionI, answer);
+        setQuestions(questions.map((que, index) => {
+            if (index === questionI) {
+                return {
+                    ...que,
+                    userAns: answer,
+                    isUserAnsTrue: (que.ans === answer)
+                }
+            } else {
+                return que
+            }
+        })
+        )
+    }
+
+    useEffect(() => {
+        console.log("questions", questions);
+    }, [questions])
     return (
         <>
             <div className='set-quiz'>
+
                 {!isStarted ?
                     <>
+
                         <img src='./assets/image/quiz-img.jpg' alt="" width="100%" height="100%" />
                         <h1 className='set-quiz-frist-text'>INVESTOR PREDICTION</h1>
                         <button className='set-quiz-start-btn' onClick={() => setIsStarted(true)}>Start</button>
                     </>
                     :
-                    <>
-                        {Questions?.length ? Questions.map((item, i) =>
+                    !seeResult ? <>
+                        <div className='count'>
+                            {current} / {questions.length}
+                        </div>
+                        {questions?.length ? questions.map((item, i) =>
                             <>
-                                <p>{item.question}</p>
-                                <div className='d-flex flex-column'>
-                                    {
-                                        item.options?.length ? item.options.map((optItem) =>
-                                            <div className={`radio-btn ${isSelected === 'true' && 'radio-bg'}`}>
-                                                <label class="lable-container">{optItem}
-                                                    <input type="radio" name="radio" onChange={() => setIsSelected('true')} />
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                        ) : <></>
-                                    }
 
-                                    {/* <div className={`radio-btn ${isSelected === 'false' && 'radio-bg'}`}>
-                                        <label class="lable-container">False
-                                            <input type="radio" name="radio" onChange={() => setIsSelected('false')} />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div> */}
-                                </div>
-                                <button className='set-quiz-start-btn'>prev</button>
-                                <button className='set-quiz-start-btn'>Next</button>
+                                {current === i && <>
+                                    <p>{item.question}</p>
+                                    <div className='d-flex flex-column'>
+                                        {
+                                            item.options?.length ? item.options.map((optItem) => {
+                                                { console.log("item.userAns === optItem", item.userAns, optItem, item.userAns === optItem) }
+                                                return <>
+                                                    <div className={`radio-btn ${item.userAns === optItem && 'radio-bg'}`}>
+                                                        <label className="lable-container">{optItem}
+                                                            <input type="radio" name="radio" checked={item.userAns === optItem} onChange={() => selectAns(i, optItem)} />
+                                                            <span className="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </>
+                                            }) : <></>
+                                        }
+                                    </div>
+                                    {current !== 0 && <button className='set-quiz-start-btn' onClick={() => setCurrent(i - 1)}>prev</button>}
+                                    {current !== Questions.length - 1 ? <button className='set-quiz-start-btn' onClick={() => setCurrent(i + 1)}>Next</button> :
+                                        <button className='set-quiz-start-btn' onClick={() => setSeeResult(true)}>See Result</button>}
+                                </>}
                             </>
-                        ) : <></>}
+                        ) : <></>
+                        }
 
-                    </>}
+                    </> :
+                        seeResult &&
+                            questions?.length ? questions.map((item, i) =>
+                                <>
+                                    <div className='result-count'>{i + 1} / {questions.length}</div>
+                                    <p>{item.question}</p>
+                                    <div className='d-flex flex-column'>
+                                        {
+                                            item.options?.length ? item.options.map((optItem) => {
+                                                { console.log("item.userAns === optItem", item.userAns, optItem, item.userAns === optItem) }
+                                                return <>
+                                                    <div className={`radio-btn ${item.userAns === optItem && 'radio-bg'} ${item.ans === optItem && "radio-bg-green"} ${item.userAns === optItem && 'radio-bg-red'}`}>
+                                                        <label className="lable-container">{optItem}
+                                                            <input disabled = {true} type="radio" name="radio" onChange={() => selectAns(i, optItem)} />
+                                                            <span className="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </>
+                                            }) : <></>
+                                        }
+                                    </div>
+                                </>
+                            ) : <></>
+                }
             </div>
         </>
     )
