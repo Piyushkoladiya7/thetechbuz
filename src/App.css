@@ -21,11 +21,11 @@
 
 .technicalbuz_nav a:hover{
   color: #ffffff;
-  background-color: #22f8d469 !important;
+  background-color: #ff6600 !important;
 }
 
 .technicalbuz_nav .active{
-  background-color: #02cdab !important;
+  background-color: #ff6600!important;
 }
 
 .technicalbuz_nav .navbar{
@@ -33,7 +33,7 @@
 }
 
 .technicalbuz_nav .navbar-dark .navbar-nav .a .active{
-  background-color: #02cdab !important;
+  background-color: #ff6600 !important;
 }
 
 .technicalbuz_nav .navbar-dark .navbar-nav .a{
@@ -511,7 +511,7 @@ width: 15%;
   color: #444444;
 }
 .Contact-form button {
-  background-color: #02cdab;
+  background-color: #ff6600;
   color: white;
   font-size: 18px;
   font-weight: 400;
@@ -528,4 +528,108 @@ width: 15%;
 .navbar-dark .navbar-toggler{
   border: none !important;
   box-shadow: none !important;
+}
+
+/* ==============================================>Quiz<============================================== */
+
+.set-quiz{
+  background-color: #fff;
+  width: 400px;
+  margin: 30px auto;
+  padding: 40px 10px;
+  box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%);
+  text-align: center;
+}
+
+.set-quiz-frist-text{
+  font-size: 21px;
+  color: #000000;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.set-quiz-start-btn{
+  margin-top: 15px;
+  padding: 5px 20px;
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+/* =============================><===================================== */
+
+.radio-btn{
+  border: 1px solid #333333;
+  margin: 5px;
+}
+
+.radio-bg{
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.radio-btn:hover{
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.lable-container {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 5px 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lable-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 23%;
+  /* transform: translateY(50%, 50%); */
+  left: 5px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.lable-container:hover input ~ .checkmark {
+  background-color: #ccc;
+  border: 2px solid #ccc;
+}
+
+.lable-container input:checked ~ .checkmark {
+  background-color: #ff6600;
+  border: 2px solid #fff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  /* display: none; */
+}
+
+/* .lable-container input:checked ~ .checkmark:after {
+  display: block;
+} */
+
+.lable-container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }

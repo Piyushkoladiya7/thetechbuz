@@ -30,24 +30,6 @@ const DetailSidebar = () => {
                     </Link>
                 </div>
             </div>
-            <div className='mobility_popular'>
-                <span className='recent_posts_tab_lable'>Categories</span>
-                <div className='tab_recent_posts'>
-                    <p>Mobility</p>
-                    <p>Science</p>
-                    <p>Tech</p>
-                    <p>Wealth</p>
-                </div>
-            </div>
-            <div className='mobility_popular'>
-                <span className='recent_posts_tab_lable'>Meta</span>
-                <div className='tab_recent_posts'>
-                    <p>Log in</p>
-                    <p>Entries feed</p>
-                    <p>Comments feed</p>
-                    <p>WordPress.org</p>
-                </div>
-            </div>
         </>
     )
 }

@@ -24,6 +24,7 @@ import AccessInstagram from './details/AccessInstagram'
 import ISS from './details/ISS'
 import StudyPetrify from './details/StudyPetrify'
 import VolcanicEruptions from './details/VolcanicEruptions'
+import Quiz from './quiz/Quiz'
 
 
 const index = () => {
@@ -32,6 +33,7 @@ const index = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/quiz" element={<Quiz />} />
                 <Route path="/details" element={<Details />} />
                 <Route path="/tech" element={<Tech />} />
                 <Route path="/science" element={<Science/>} />
