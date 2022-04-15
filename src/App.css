@@ -185,6 +185,7 @@ background-color: #02cdab;
 
 .mobility-title{
   font-size: 22px;
+  color: #232323;
 }
 
 .date_althaf p{
@@ -204,7 +205,7 @@ background-color: #02cdab;
 .side-menu{
   /* height: 73px; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   overflow: hidden;
 }
 

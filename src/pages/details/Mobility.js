@@ -19,7 +19,7 @@ const Mobility = () => {
                                 <br />
                                 <p>While the absolutely practical electrical AVTR models conferred by the German manufacturing business left everybody surprised, the mind-controlled version of the futurist vehicle is presently in development and testing stage. what is more, Mercedes-Benz conjointly declared that successive ‘thought driven’ iteration of AVTR can accompany associate degree engine power of quite 350kW, and can be put in with battery (made from graphene-based technology) of nearly 110kWhr, that may be absolutely charged inside quarter-hour.</p>
                                 <br/>
-                                <img src="./assets/image/mobilety-detail-img.jfif" alt="" />
+                                <img src="./assets/image/mobilety-detail-img.jfif" alt="" width="100%"/>
                             </div>
                         </div>
                         <div className='detail-form mt-5'>

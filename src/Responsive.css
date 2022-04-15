@@ -14,6 +14,10 @@
     .money-text-component{
         margin-top: 10px;
     }
+    .detail-header{
+        font-size: 24px;
+    }
+    
 
 }
 
@@ -34,6 +38,9 @@
 
     .date_althaf p{
         font-size: 12px;
+    }
+    .detail-header{
+        font-size: 20px;
     }
     
 }

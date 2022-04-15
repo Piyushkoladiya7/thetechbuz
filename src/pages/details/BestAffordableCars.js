@@ -18,11 +18,11 @@ const BestAffordableCars = () => {
                                 <p>Known for his or her high-end luxury vehicles and setting new market trends with their innovative technology, Mercedes-Benz is going no inebriated right-side-out with its futurist AVTR thought automobile. additionally to the breathless style, the German car manufacturer is decided to introduce humans to the wild thought of thought-driven vehicles. And at the recent IAA 2021 show in metropolis, Mercedes-Benz unconcealed its BCI technology automobile version that sent a wave of feeling across the complete tech-driven automotive world.</p>
                                 <br />
                                 <p>2021 Hyundai Elantra</p>
-                                <img src="./assets/image/bestaffordablecars_detail_img.jfif" alt="" />
+                                <img src="./assets/image/bestaffordablecars_detail_img.jfif" alt="" width="100%"/>
                                 <p>While the absolutely practical electrical AVTR models conferred by the German manufacturing business left everybody surprised, the mind-controlled version of the futurist vehicle is presently in development and testing stage. what is more, Mercedes-Benz conjointly declared that successive ‘thought driven’ iteration of AVTR can accompany associate degree engine power of quite 350kW, and can be put in with battery (made from graphene-based technology) of nearly 110kWhr, that may be absolutely charged inside quarter-hour.</p>
                                 <br />
                                 <p>2021 Toyota Camry</p>
-                                <img src="./assets/image/toyota-car.jfif" alt="" />
+                                <img src="./assets/image/toyota-car.jfif" alt="" width="100%" />
                             </div>
                         </div>
                         <div className='detail-form mt-5'>

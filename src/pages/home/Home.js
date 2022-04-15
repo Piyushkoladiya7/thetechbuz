@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container,Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -63,10 +63,14 @@ const Home = () => {
                         <div className='tab_mobility'>
                             <Row>
                                 <Col lg={6}>
-                                    <div className='grid-Tech grid-mobility'>
-                                        {/* <button className='mobility-btn'>Mobility</button> */}
-                                    </div>
-                                    <h2 className='mobility-title'>Mercedes-Benz Inspired By ‘Avatar’</h2>
+                                    <Link to="/mobility" className='text-decoration-none'>
+                                        <div className='grid-Tech grid-mobility'>
+                                            <button className='mobility-btn mb-0' style={{ position: "absolute", left: "0px", bottom: "0px" }}>Mobility</button>
+                                        </div>
+                                    </Link>
+                                    <Link to="/mobility" className='text-decoration-none'>
+                                        <h2 className='mobility-title'>Mercedes-Benz Inspired By ‘Avatar’</h2>
+                                    </Link>
                                     <div className='d-flex date_althaf'>
                                         <p>August 1, 2021 <span>althaf</span> 0 </p>
                                     </div>
@@ -127,10 +131,10 @@ const Home = () => {
                             <div className='gap-2 mb-2'>
                                 <Link to="/tech" className='text-decoration-none'>
                                     <Row >
-                                        <Col lg={4}>
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
                                             <img src="./assets/image/details-img.jfif" width="100%" height="70px" alt="" />
                                         </Col>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
                                             <div className='side-menu-text'>
                                                 <h3>Apple’s Appeal On Epic Game Got Rejected; Ordered To Respect The Decision</h3>
                                                 <div className='d-flex date_althaf'>
@@ -144,10 +148,10 @@ const Home = () => {
                             <div className='gap-2 mb-2'>
                                 <Link to="/science" className='text-decoration-none'>
                                     <Row >
-                                        <Col lg={4}>
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
                                             <img src="./assets/image/download.jfif" width="100%" height="70px" alt="" />
                                         </Col>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
                                             <div className='side-menu-text'>
                                                 <h3>Latin American farms and fields turn out plenty of food,</h3>
                                                 <div className='d-flex date_althaf'>
@@ -161,10 +165,10 @@ const Home = () => {
                             <div className='gap-2 mb-2'>
                                 <Link to="/mobility" className='text-decoration-none'>
                                     <Row >
-                                        <Col lg={4}>
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
                                             <img src="./assets/image/grid_img_3.jfif" width="100%" height="70px" alt="" />
                                         </Col>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
                                             <div className='side-menu-text'>
                                                 <h3>Mercedes-Benz Inspired By ‘Avatar’</h3>
                                                 <div className='d-flex date_althaf'>
@@ -178,10 +182,10 @@ const Home = () => {
                             <div className='gap-2 mb-2'>
                                 <Link to="/wealth" className='text-decoration-none'>
                                     <Row >
-                                        <Col lg={4}>
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
                                             <img src="./assets/image/grid_img_4.jfif" width="100%" height="70px" alt="" />
                                         </Col>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
                                             <div className='side-menu-text'>
                                                 <h3>A STUDY ON CREDIT SCORES</h3>
                                                 <div className='d-flex date_althaf'>
@@ -195,10 +199,10 @@ const Home = () => {
                             <div className='gap-2 mb-2'>
                                 <Link to="/bestaffordablecars" className='text-decoration-none'>
                                     <Row >
-                                        <Col lg={4}>
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
                                             <img src="./assets/image/side-menu-car.jfif" width="100%" height="70px" alt="" />
                                         </Col>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
                                             <div className='side-menu-text'>
                                                 <h3>Best Affordable Cars 2021</h3>
                                                 <div className='d-flex date_althaf'>
@@ -279,63 +283,93 @@ const Home = () => {
                 <div className='tab_technology'>
                     <Row>
                         <Col lg={6}>
-                            <Link to="/tech" className='text-decoration-none'>
-                                <div className='side-menu gap-2 mb-2'>
-                                    <img src="./assets/image/details-img.jfif" alt="" width="125px" height="70px" />
-                                    <div className='side-menu-text'>
-                                        <h3>Apple’s Appeal On Epic Game Got Rejected; Ordered To Respect The Decision</h3>
-                                        <div className='d-flex date_althaf'>
-                                            <p>August 1, 2021 <span>althaf</span> 0 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link to="/samsung-jet" className='text-decoration-none'>
-                                <div className='side-menu gap-2 mb-2'>
-                                    <img src="./assets/image/Samsung-Jet.jfif" alt="" width="125px" height="70px" />
-                                    <div className='side-menu-text'>
-                                        <h3>Samsung’s Jet Bot AI+ Robot Vacuum Is Necessary For Pet Lovers</h3>
-                                        <div className='d-flex date_althaf'>
-                                            <p>August 1, 2021 <span>althaf</span> 0 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link to="/xiaomi" className='text-decoration-none'>
-                                <div className='side-menu gap-2 mb-2'>
-                                    <img src="./assets/image/Xiaomi.jfif" alt="" width="125px" height="70px" />
-                                    <div className='side-menu-text'>
-                                        <h3>Xiaomi Has Smart Glasses Comes With A Built-In Display</h3>
-                                        <div className='d-flex date_althaf'>
-                                            <p>August 1, 2021 <span>althaf</span> 0 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
+                            <div className='gap-2 mb-2'>
+                                <Link to="/tech" className='text-decoration-none'>
+                                    <Row >
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
+                                            <img src="./assets/image/details-img.jfif" alt="" width="100%" height="70px" />
+                                        </Col>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
+                                            <div className='side-menu-text'>
+                                                <h3>Apple’s Appeal On Epic Game Got Rejected; Ordered To Respect The Decision</h3>
+                                                <div className='d-flex date_althaf'>
+                                                    <p>August 1, 2021 <span>althaf</span> 0 </p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Link>
+                            </div>
+                            <div className='gap-2 mb-2'>
+                                <Link to="/samsung-jet" className='text-decoration-none'>
+                                    <Row >
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
+                                            <img src="./assets/image/Samsung-Jet.jfif" alt="" width="100%" height="70px" />
+                                        </Col>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
+                                            <div className='side-menu-text'>
+                                                <h3>Samsung’s Jet Bot AI+ Robot Vacuum Is Necessary For Pet Lovers</h3>
+                                                <div className='d-flex date_althaf'>
+                                                    <p>August 1, 2021 <span>althaf</span> 0 </p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Link>
+                            </div>
+                            <div className='gap-2 mb-2'>
+                                <Link to="/xiaomi" className='text-decoration-none'>
+                                    <Row >
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
+                                            <img src="./assets/image/Xiaomi.jfif" alt="" width="100%" height="70px" />
+                                        </Col>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
+                                            <div className='side-menu-text'>
+                                                <h3>Xiaomi Has Smart Glasses Comes With A Built-In Display</h3>
+                                                <div className='d-flex date_althaf'>
+                                                    <p>August 1, 2021 <span>althaf</span> 0 </p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Link>
+                            </div>
                         </Col>
                         <Col lg={6}>
-                            <Link to="/motorola" className='text-decoration-none'>
-                                <div className='side-menu gap-2 mb-2'>
-                                    <img src="./assets/image/Motorola-Space.jfif" alt="" width="125px" height="70px" />
-                                    <div className='side-menu-text'>
-                                        <h3>Motorola’s Space Charging Tech Can Charge Up To 4 Phones Simultaneously</h3>
-                                        <div className='d-flex date_althaf'>
-                                            <p>August 1, 2021 <span>althaf</span> 0 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link to="/access-instagram" className='text-decoration-none'>
-                                <div className='side-menu gap-2 mb-2'>
-                                    <img src="./assets/image/Instagram-Access.jfif" alt="" width="125px" height="70px" />
-                                    <div className='side-menu-text'>
-                                        <h3>Access Instagram’s ‘On This Day’ Feature; Simple Steps</h3>
-                                        <div className='d-flex date_althaf'>
-                                            <p>August 1, 2021 <span>althaf</span> 0 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
+                            <div className='gap-2 mb-2'>
+                                <Link to="/motorola" className='text-decoration-none'>
+                                    <Row >
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
+                                            <img src="./assets/image/Motorola-Space.jfif" alt="" width="100%" height="70px" />
+                                        </Col>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
+                                            <div className='side-menu-text'>
+                                                <h3>Motorola’s Space Charging Tech Can Charge Up To 4 Phones Simultaneously</h3>
+                                                <div className='d-flex date_althaf'>
+                                                    <p>August 1, 2021 <span>althaf</span> 0 </p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Link>
+                            </div>
+                            <div className='gap-2 mb-2'>
+                                <Link to="/access-instagram" className='text-decoration-none'>
+                                    <Row >
+                                        <Col xl={4} lg={2} md={2} sm={3} xs={5}>
+                                            <img src="./assets/image/Instagram-Access.jfif" alt="" width="100%" height="70px" />
+                                        </Col>
+                                        <Col xl={8} lg={10} md={10} sm={9} xs={7}>
+                                            <div className='side-menu-text'>
+                                                <h3>Access Instagram’s ‘On This Day’ Feature; Simple Steps</h3>
+                                                <div className='d-flex date_althaf'>
+                                                    <p>August 1, 2021 <span>althaf</span> 0 </p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Link>
+                            </div>
                         </Col>
                     </Row>
                 </div>
@@ -417,7 +451,7 @@ const Home = () => {
                     </Row>
                 </div>
             </div>
-        </Container>
+        </Container >
     )
 }
 
